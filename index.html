@@ -241,7 +241,26 @@
           </div>
           <p class="contact-note">You can update these details later in the settings.</p>
         </div>
-        <form class="contact-form action="/contact" method="POST" id="contact-form">
+                   <form class="contact-form" id="contact-form">
+             <input type="text" name="name" placeholder="Your Name" required
+ />
+             <input type="email" name="email" placeholder="Your Email"
+ required />
+             <input type="text" name="company" placeholder="Company
+ (optional)" />
+             <select name="interest">
+               <option value="">I'm interested in...</option>
+               <option>Electronics</option>
+               <option>Adult Products</option>
+               <option>Toys &amp; Games</option>
+               <option>Other Products</option>
+               <option>General Sourcing</option>
+             </select>
+             <textarea name="message" rows="4" placeholder="Tell me what you
+ need..." required></textarea>
+             <button type="submit" class="btn btn-primary">Send
+ Message</button>
+           </form>
           <input type="text"name="name"placeholder="Your Name" required />
           <input type="email"name="email"name="company" placeholder="Your Email" required />
           <input type="text" placeholder="Company (optional)" />
