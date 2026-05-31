@@ -2,27 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Xarvanta — China Sourcing Agent | Shenzhen</title>
-  <meta name="description" content="Xarvanta — Your China sourcing agent based in Shenzhen. Find reliable suppliers, factories, and products worldwide. Electronics, adult products, toys & more." />
+  <meta name="description" content="Xarvanta — Your China sourcing agent based in Shenzhen. Find reliable suppliers, factories, and products worldwide." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌏</text></svg>" />
+  <style>
+    /* Quick mobile fixes */
+    .product-card-img img.product-photo { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
+    .gallery-main img#gallery-img { width:100%; height:100%; object-fit:contain; background:#f5f5f5; }
+    .contact-section .btn, .contact-buttons .btn { -webkit-tap-highlight-color:transparent; }
+    .whatsapp-float { -webkit-tap-highlight-color:transparent; }
+  </style>
 </head>
 <body>
 
   <!-- ========== NAVIGATION ========== -->
-  <nav class="nav">
+  <nav class="nav" id="navbar">
     <div class="container nav-inner">
       <a href="#" class="logo" data-page="home">Xarvanta</a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="#" data-page="home" class="active">Home</a>
         <a href="#" data-page="products">Products</a>
-        <a href="#" data-page="contact">Contact</a>
       </div>
-      <button class="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -34,196 +39,85 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <div class="hero-badge">📍 Based in Shenzhen, Serving the World</div>
-        <h1>Your Trusted China<br /><span class="highlight">Sourcing Agent</span></h1>
+        <div class="hero-badge">📍 Shenzhen, China</div>
+        <h1>Your Trusted <span class="highlight">China Sourcing Agent</span></h1>
         <p class="hero-sub">
-          I help global businesses find reliable suppliers, negotiate fair prices, and manage production — with honesty, speed, and quality you can trust.
+          I help global businesses find reliable suppliers, negotiate fair prices, and manage production — with honesty and speed.
         </p>
-        <div class="hero-cta">
-          <a href="#" class="btn btn-primary" data-page="contact">Contact Me</a>
-          <a href="#" class="btn btn-outline" data-page="products">View Products</a>
-        </div>
+        <a href="#" class="btn btn-primary btn-lg" data-page="products">Browse Products</a>
+        <a href="#contact-section" class="btn btn-outline btn-lg" onclick="document.getElementById('contact-section').scrollIntoView({behavior:'smooth'})">Contact Me</a>
       </div>
     </section>
 
     <!-- Trust Bar -->
     <section class="trust-bar">
       <div class="container">
-        <div class="trust-item"><span class="trust-icon">🏭</span> Factory Sourcing</div>
-        <div class="trust-item"><span class="trust-icon">💰</span> Price Negotiation</div>
-        <div class="trust-item"><span class="trust-icon">🔍</span> Quality Control</div>
-        <div class="trust-item"><span class="trust-icon">📦</span> Shipping & Logistics</div>
-        <div class="trust-item"><span class="trust-icon">⚡</span> Fast Response</div>
+        <span class="trust-item">🏭 Factory Sourcing</span>
+        <span class="trust-item">💰 Best Prices</span>
+        <span class="trust-item">🔍 Quality Control</span>
+        <span class="trust-item">⚡ Fast Response</span>
       </div>
     </section>
 
     <!-- About -->
     <section class="section about-section">
       <div class="container">
-        <div class="about-grid">
-          <div class="about-text">
-            <h2>I Find What You Need in China</h2>
-            <p>Based in Shenzhen — the world's manufacturing hub. Whether you need electronics, adult products, toys, or custom manufacturing, I connect you with reliable factories, negotiate the best prices, and ensure quality before shipping.</p>
-            <div class="about-stats">
-              <div class="about-stat"><span class="stat-num">5+</span><span class="stat-label">Years Experience</span></div>
-              <div class="about-stat"><span class="stat-num">200+</span><span class="stat-label">Factories Visited</span></div>
-              <div class="about-stat"><span class="stat-num">50+</span><span class="stat-label">Countries Served</span></div>
-            </div>
-          </div>
-          <div class="about-img">
-            <div class="about-img-placeholder" id="about-photo">
-              <span>📸</span>
-              <p>Your Photo</p>
-              <small>Replace img/about.jpg</small>
-            </div>
-          </div>
+        <h2>I Find What You Need in China</h2>
+        <p>Based in Shenzhen — the world's manufacturing hub. I connect you with reliable factories, negotiate the best prices, and ensure quality before shipping.</p>
+        <div class="about-stats">
+          <div class="about-stat"><span class="stat-num">5+</span><span>Years</span></div>
+          <div class="about-stat"><span class="stat-num">200+</span><span>Factories</span></div>
+          <div class="about-stat"><span class="stat-num">50+</span><span>Countries</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Home Products Preview -->
-    <section class="section preview-section">
+    <!-- Products Preview -->
+    <section class="section" style="padding-top:0;">
       <div class="container">
         <h2 class="section-title">What I Source</h2>
-        <p class="section-sub">Click a category to see product details and photos</p>
-        <div class="product-grid">
-          <a href="#" class="product-card" data-product="electronics" data-page="product-detail">
-            <div class="product-card-img">
-              <img src="img/electronics/cover.jpg" alt="Electronics" class="product-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="product-emoji-fallback"><span>📱</span><small>Add img/electronics/cover.jpg</small></div>
-            </div>
-            <h3>Electronics</h3>
-            <p>Phones, accessories, smart devices, components</p>
-          </a>
-          <a href="#" class="product-card" data-product="adult" data-page="product-detail">
-            <div class="product-card-img">
-              <img src="img/adult/cover.jpg" alt="Adult Products" class="product-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="product-emoji-fallback"><span>🔞</span><small>Add img/adult/cover.jpg</small></div>
-            </div>
-            <h3>Adult Products</h3>
-            <p>Wellness, intimate products, quality assured</p>
-          </a>
-          <a href="#" class="product-card" data-product="toys" data-page="product-detail">
-            <div class="product-card-img">
-              <img src="img/toys/cover.jpg" alt="Toys & Games" class="product-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="product-emoji-fallback"><span>🧸</span><small>Add img/toys/cover.jpg</small></div>
-            </div>
-            <h3>Toys &amp; Games</h3>
-            <p>Educational toys, plush, outdoor &amp; hobby</p>
-          </a>
-          <a href="#" class="product-card" data-product="other" data-page="product-detail">
-            <div class="product-card-img">
-              <img src="img/other/cover.jpg" alt="Other Products" class="product-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="product-emoji-fallback"><span>📦</span><small>Add img/other/cover.jpg</small></div>
-            </div>
-            <h3>Other Products</h3>
-            <p>Home goods, packaging, custom requests</p>
-          </a>
+        <p class="section-sub">Tap a category to see details &amp; photos</p>
+        <div class="product-grid" id="homeProducts">
+          <!-- rendered by JS -->
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section cta-section">
+    <!-- ========== CONTACT ON HOME PAGE ========== -->
+    <section class="contact-section" id="contact-section">
       <div class="container">
-        <h2>Ready to Source?</h2>
-        <p>Send me a message — tell me what you need, and I'll get back to you within 24 hours.</p>
-        <a href="#" class="btn btn-primary btn-lg" data-page="contact">Get in Touch</a>
-      </div>
-    </section>
+        <h2>Contact Me</h2>
+        <p class="contact-intro">Let's talk about your sourcing needs. I respond within a few hours.</p>
 
-  </section>
+        <div class="contact-cards">
+          <div class="contact-card-item">
+            <div class="cc-icon">📧</div>
+            <div class="cc-label">Email</div>
+            <a href="mailto:trade@xarvanta.com" class="cc-value">trade@xarvanta.com</a>
+          </div>
+          <div class="contact-card-item">
+            <div class="cc-icon">💬</div>
+            <div class="cc-label">WhatsApp</div>
+            <a href="https://wa.me/85255894516" target="_blank" class="cc-value">+852 5589 4516</a>
+          </div>
+          <div class="contact-card-item">
+            <div class="cc-icon">💚</div>
+            <div class="cc-label">WeChat</div>
+            <span class="cc-value">xarvanta</span>
+          </div>
+        </div>
 
-  <!-- ========== PAGE: PRODUCTS ========== -->
-  <section id="page-products" class="page">
-    <div class="container" style="padding-top:120px;">
-      <h1 class="page-title">Product Categories</h1>
-      <p class="page-sub">Click any category to browse products and photos</p>
-      <div class="product-grid product-grid-full">
-        <a href="#" class="product-card" data-product="electronics" data-page="product-detail">
-          <div class="product-card-img">
-            <img src="img/electronics/cover.jpg" alt="Electronics" class="product-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="product-emoji-fallback"><span>📱</span><small>Add img/electronics/cover.jpg</small></div>
-          </div>
-          <h3>Electronics</h3>
-          <p>Smartphones, accessories, earphones, chargers, smart home devices, PC components — Shenzhen's specialty.</p>
-        </a>
-        <a href="#" class="product-card" data-product="adult" data-page="product-detail">
-          <div class="product-card-img">
-            <img src="img/adult/cover.jpg" alt="Adult Products" class="product-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="product-emoji-fallback"><span>🔞</span><small>Add img/adult/cover.jpg</small></div>
-          </div>
-          <h3>Adult Products</h3>
-          <p>Adult wellness, intimate products, accessories. Discreet sourcing with quality materials.</p>
-        </a>
-        <a href="#" class="product-card" data-product="toys" data-page="product-detail">
-          <div class="product-card-img">
-            <img src="img/toys/cover.jpg" alt="Toys & Games" class="product-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="product-emoji-fallback"><span>🧸</span><small>Add img/toys/cover.jpg</small></div>
-          </div>
-          <h3>Toys &amp; Games</h3>
-          <p>Educational toys, plush, RC toys, board games, outdoor games.</p>
-        </a>
-        <a href="#" class="product-card" data-product="other" data-page="product-detail">
-          <div class="product-card-img">
-            <img src="img/other/cover.jpg" alt="Other Products" class="product-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="product-emoji-fallback"><span>📦</span><small>Add img/other/cover.jpg</small></div>
-          </div>
-          <h3>Other Products</h3>
-          <p>Home goods, packaging, promotional items, custom manufacturing.</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PAGE: PRODUCT DETAIL ========== -->
-  <section id="page-product-detail" class="page">
-    <div class="container" style="padding-top:120px;">
-      <a href="#" class="back-link" data-page="products">← Back to Categories</a>
-      <div id="product-detail-content"></div>
-    </div>
-  </section>
-
-  <!-- ========== PAGE: CONTACT ========== -->
-  <section id="page-contact" class="page">
-    <div class="container" style="padding-top:120px;">
-      <h1 class="page-title">Contact Me</h1>
-      <p class="page-sub">Let's talk about your sourcing needs. I respond within a few hours.</p>
-
-      <div class="contact-layout">
-        <div class="contact-sidebar">
-          <div class="contact-card">
-            <h3>My Contact</h3>
-            <div class="contact-item">
-              <span class="c-label">📧 Email</span>
-              <a href="mailto:trade@xarvanta.com" class="c-value">trade@xarvanta.com</a>
-            </div>
-            <div class="contact-item">
-              <span class="c-label">💬 WhatsApp</span>
-              <a href="https://wa.me/85255894516" target="_blank" class="c-value">+852 5589 4516</a>
-            </div>
-            <div class="contact-item">
-              <span class="c-label">💬 WeChat</span>
-              <span class="c-value">xarvanta</span>
-            </div>
-            <div class="contact-item">
-              <span class="c-label">📍 Location</span>
-              <span class="c-value">Shenzhen, China</span>
-            </div>
-            <div class="contact-buttons">
-              <a href="https://wa.me/85255894516" target="_blank" class="btn btn-whatsapp">💬 WhatsApp Me</a>
-              <a href="mailto:trade@xarvanta.com" class="btn btn-outline">📧 Send Email</a>
-            </div>
-          </div>
+        <div class="contact-buttons">
+          <a href="https://wa.me/85255894516" target="_blank" class="btn btn-whatsapp">💬 WhatsApp Me</a>
+          <a href="mailto:trade@xarvanta.com" class="btn btn-outline">📧 Send Email</a>
         </div>
 
         <div class="contact-form-wrap">
-          <h3>Send Me a Message</h3>
-          <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <h3>Or leave a message</h3>
+          <form id="contact-form" class="contact-form">
             <input type="text" name="name" placeholder="Your Name *" required />
             <input type="email" name="email" placeholder="Your Email *" required />
-            <input type="text" name="phone" placeholder="Phone / WhatsApp (optional)" />
-            <input type="text" name="company" placeholder="Company (optional)" />
+            <input type="text" name="phone" placeholder="Phone / WhatsApp" />
             <select name="category">
               <option value="">I'm looking for...</option>
               <option>Electronics</option>
@@ -232,12 +126,32 @@
               <option>Other Products</option>
               <option>General Sourcing</option>
             </select>
-            <textarea name="message" rows="5" placeholder="Describe what you need — product, quantity, target price, any specific requirements... *" required></textarea>
+            <textarea name="message" rows="4" placeholder="Describe what you need — product, quantity, target price..." required></textarea>
             <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
           </form>
-          <p class="form-note">* Required fields. I'll get back to you within 24 hours.</p>
+          <p class="form-note">* Required. I'll reply within 24 hours.</p>
         </div>
       </div>
+    </section>
+
+  </section>
+
+  <!-- ========== PAGE: PRODUCTS ========== -->
+  <section id="page-products" class="page">
+    <div class="container" style="padding-top:96px;">
+      <h1 class="page-title">Product Categories</h1>
+      <p class="page-sub">Tap a category to see details</p>
+      <div class="product-grid" id="productsGrid">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PAGE: PRODUCT DETAIL ========== -->
+  <section id="page-product-detail" class="page">
+    <div class="container" style="padding-top:96px;">
+      <a href="#" class="back-link" data-page="products">← Back</a>
+      <div id="product-detail-content"></div>
     </div>
   </section>
 
@@ -259,7 +173,7 @@
         <div class="footer-links">
           <a href="#" data-page="home">Home</a>
           <a href="#" data-page="products">Products</a>
-          <a href="#" data-page="contact">Contact</a>
+          <a href="#contact-section" onclick="if(document.getElementById('page-home').classList.contains('active')){event.preventDefault();document.getElementById('contact-section').scrollIntoView({behavior:'smooth'});}">Contact</a>
         </div>
       </div>
       <p class="footer-copy">&copy; 2026 Xarvanta. All rights reserved.</p>
