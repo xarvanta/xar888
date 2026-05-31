@@ -1,344 +1,326 @@
-/* ========== Reset & Base ========== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #1a1a2e;
-  background: #faf9f6;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-img { max-width: 100%; display: block; }
-a { text-decoration: none; color: inherit; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xarvanta | China Sourcing Agent — Shenzhen</title>
+  <meta name="description" content="Xarvanta — China sourcing agent based in Shenzhen. Find reliable suppliers, factories, and products. Electronics, adult products, toys & more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-/* ========== Typography ========== */
-h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
-h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; }
-h3 { font-size: 1.2rem; font-weight: 600; }
-p { color: #555; }
-.highlight { color: #2563eb; }
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo" data-page="home">Xarvanta</a>
+      <div class="nav-links">
+        <a href="#" data-page="home" class="active">Home</a>
+        <a href="#" data-page="products">Products</a>
+        <a href="#" data-page="contact">Contact</a>
+      </div>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-/* ========== Navigation ========== */
-.nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(250,249,246,0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-}
-.nav-inner {
-  display: flex; align-items: center;
-  justify-content: space-between;
-  height: 68px;
-}
-.logo { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.03em; }
-.nav-links { display: flex; gap: 32px; }
-.nav-links a {
-  font-size: 0.9rem; font-weight: 500;
-  color: #666; transition: color 0.2s;
-  position: relative;
-}
-.nav-links a:hover, .nav-links a.active { color: #1a1a2e; }
-.nav-links a.active::after {
-  content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
-  height: 2px; background: #2563eb; border-radius: 1px;
-}
-.hamburger {
-  display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding: 4px;
-}
-.hamburger span {
-  display: block; width: 24px; height: 2px;
-  background: #1a1a2e; border-radius: 2px;
-  transition: 0.3s;
-}
+  <!-- ============================== -->
+  <!-- Page: Home                     -->
+  <!-- ============================== -->
+  <section id="page-home" class="page active">
 
-/* ========== Page System ========== */
-.page { display: none; }
-.page.active { display: block; }
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">🌏 Based in Shenzhen, Serving the World</div>
+        <h1>Your Trusted China<br /><span class="highlight">Sourcing Agent</span></h1>
+        <p class="hero-sub">
+          I help global businesses find the right suppliers, factories, and products — with honesty, speed, and a handshake that means something.
+        </p>
+        <div class="hero-cta">
+          <a href="#" class="btn btn-primary" data-page="contact">Contact Me</a>
+          <a href="#" class="btn btn-outline" data-page="products">See What I Source</a>
+        </div>
+      </div>
+    </section>
 
-/* ========== Hero ========== */
-.hero {
-  padding: 140px 0 80px;
-  background: linear-gradient(135deg, #f0f4ff 0%, #faf9f6 50%, #fef9e7 100%);
-  text-align: center;
-}
-.hero-badge {
-  display: inline-block;
-  background: rgba(37,99,235,0.08);
-  color: #2563eb;
-  padding: 8px 18px;
-  border-radius: 100px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
-.hero h1 { margin-bottom: 20px; }
-.hero-sub {
-  max-width: 600px; margin: 0 auto 36px;
-  font-size: 1.1rem; color: #666; line-height: 1.7;
-}
-.hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+      <div class="container">
+        <div class="trust-item">
+          <span class="trust-icon">🏭</span>
+          <span>Factory Sourcing</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">💰</span>
+          <span>Price Negotiation</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">🔍</span>
+          <span>Quality Control</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">🌎</span>
+          <span>Global Logistics</span>
+        </div>
+      </div>
+    </section>
 
-/* ========== Buttons ========== */
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 32px; border-radius: 10px;
-  font-size: 0.95rem; font-weight: 600;
-  cursor: pointer; transition: all 0.2s;
-  border: none;
-}
-.btn-primary {
-  background: #1a1a2e; color: #fff;
-}
-.btn-primary:hover { background: #2563eb; transform: translateY(-1px); }
-.btn-outline {
-  background: transparent; color: #1a1a2e;
-  border: 2px solid #1a1a2e;
-}
-.btn-outline:hover { background: #1a1a2e; color: #fff; }
-.btn-lg { padding: 18px 44px; font-size: 1.05rem; }
+    <!-- Intro -->
+    <section class="section intro-section">
+      <div class="container intro-grid">
+        <div class="intro-text">
+          <h2>I Find What You Need in China</h2>
+          <p>Based in Shenzhen — the world's manufacturing hub. Whether you need electronics, adult products, toys, or something custom, I connect you with reliable factories, negotiate fair prices, and make sure everything meets your standards before shipping.</p>
+          <div class="intro-highlights">
+            <div>✅ 200+ factories visited</div>
+            <div>✅ 5+ years sourcing experience</div>
+            <div>✅ Free initial consultation</div>
+          </div>
+        </div>
+        <div class="intro-img">
+          <div class="intro-img-placeholder">
+            <span>📸</span>
+            <p>Your photo here</p>
+            <small>Replace img/intro.jpg</small>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* ========== Trust Bar ========== */
-.trust-bar {
-  padding: 32px 0;
-  border-bottom: 1px solid #eee;
-}
-.trust-bar .container {
-  display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
-}
-.trust-item {
-  display: flex; align-items: center; gap: 8px;
-  font-size: 0.9rem; font-weight: 500; color: #555;
-}
-.trust-icon { font-size: 1.3rem; }
+    <!-- Product Showcase -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">What I Source</h2>
+        <p class="section-sub">Four categories. One standard: quality.</p>
+        <div class="product-grid">
+          <a href="#" class="product-card" data-page="contact">
+            <div class="product-card-img" style="background:#e3f2fd;">
+              <img src="img/electronics.jpg" alt="Electronics" class="product-card-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="product-card-emoji-fallback" style="display:none;">
+                <span class="product-emoji">📱</span>
+                <small>Add photo → img/electronics.jpg</small>
+              </div>
+            </div>
+            <h3>Electronics</h3>
+            <p>Phones, accessories, smart devices, components &amp; more.</p>
+          </a>
+          <a href="#" class="product-card" data-page="contact">
+            <div class="product-card-img" style="background:#fce4ec;">
+              <img src="img/adult.jpg" alt="Adult Products" class="product-card-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="product-card-emoji-fallback" style="display:none;">
+                <span class="product-emoji">🔞</span>
+                <small>Add photo → img/adult.jpg</small>
+              </div>
+            </div>
+            <h3>Adult Products</h3>
+            <p>Wellness, intimate products, accessories — quality assured.</p>
+          </a>
+          <a href="#" class="product-card" data-page="contact">
+            <div class="product-card-img" style="background:#fff3e0;">
+              <img src="img/toys.jpg" alt="Toys & Games" class="product-card-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="product-card-emoji-fallback" style="display:none;">
+                <span class="product-emoji">🧸</span>
+                <small>Add photo → img/toys.jpg</small>
+              </div>
+            </div>
+            <h3>Toys &amp; Games</h3>
+            <p>Educational toys, plush, outdoor &amp; hobby products.</p>
+          </a>
+          <a href="#" class="product-card" data-page="contact">
+            <div class="product-card-img" style="background:#f3e5f5;">
+              <img src="img/other.jpg" alt="Other Products" class="product-card-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="product-card-emoji-fallback" style="display:none;">
+                <span class="product-emoji">📦</span>
+                <small>Add photo → img/other.jpg</small>
+              </div>
+            </div>
+            <h3>Other Products</h3>
+            <p>Home goods, packaging, promotional items, custom requests.</p>
+          </a>
+        </div>
+        <p class="product-note">💡 Each card links to contact. Click → message me directly.</p>
+      </div>
+    </section>
 
-/* ========== Section ========== */
-.section { padding: 80px 0; }
-.section-title {
-  text-align: center; margin-bottom: 12px;
-}
-.section-sub {
-  text-align: center; color: #888; margin-bottom: 48px; font-size: 1rem;
-}
+    <!-- Call to Action -->
+    <section class="section cta-section">
+      <div class="container">
+        <h2>Let's Find What You Need</h2>
+        <p>Send me a message — tell me what you're looking for, and I'll get back to you within 24 hours.</p>
+        <a href="#" class="btn btn-primary btn-lg" data-page="contact">Get in Touch</a>
+      </div>
+    </section>
 
-/* ========== Product Cards ========== */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-}
-.product-card {
-  display: flex; flex-direction: column;
-  background: #fff; border-radius: 16px; padding: 28px;
-  border: 1px solid #eee;
-  transition: all 0.25s;
-  cursor: pointer;
-}
-.product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-  border-color: #d0d0d0;
-}
-.product-card-img {
-  width: 100%; aspect-ratio: 16/10;
-  border-radius: 12px; display: flex; align-items: center; justify-content: center;
-  margin-bottom: 20px;
-}
-.product-emoji { font-size: 3rem; }
-.product-card h3 { margin-bottom: 8px; }
-.product-card p { font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
-.card-link { font-size: 0.85rem; font-weight: 600; color: #2563eb; margin-top: auto; }
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <h4>Xarvanta</h4>
+            <p>Shenzhen, China</p>
+          </div>
+          <div class="footer-links">
+            <a href="#" data-page="home">Home</a>
+            <a href="#" data-page="products">Products</a>
+            <a href="#" data-page="contact">Contact</a>
+          </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Xarvanta. All rights reserved.</p>
+      </div>
+    </footer>
+  </section>
 
-/* ========== CTA Section ========== */
-.cta-section {
-  text-align: center;
-  background: linear-gradient(135deg, #1a1a2e 0%, #2563eb 100%);
-  color: #fff;
-  padding: 100px 0;
-}
-.cta-section h2 { color: #fff; margin-bottom: 16px; }
-.cta-section p { color: rgba(255,255,255,0.7); margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
-.cta-section .btn-primary { background: #fff; color: #1a1a2e; }
-.cta-section .btn-primary:hover { background: #eef; transform: translateY(-1px); }
+  <!-- ============================== -->
+  <!-- Page: Products                 -->
+  <!-- ============================== -->
+  <section id="page-products" class="page">
+    <div class="container" style="padding-top:120px;">
+      <h1 class="page-title">What I Source</h1>
+      <p class="page-sub">I help you find the right products and factories in China.</p>
 
-/* ========== Footer ========== */
-.footer { padding: 48px 0 24px; border-top: 1px solid #eee; }
-.footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
-.footer h4 { font-size: 1rem; margin-bottom: 4px; }
-.footer p { font-size: 0.85rem; color: #888; }
-.footer-links { display: flex; gap: 24px; }
-.footer-links a { font-size: 0.88rem; color: #666; }
-.footer-links a:hover { color: #2563eb; }
-.footer-copy { text-align: center; margin-top: 32px; font-size: 0.8rem; color: #aaa; }
+      <div class="product-full-list">
+        <div class="product-full-item">
+          <div class="product-full-img" style="background:#e3f2fd;">
+            <img src="img/electronics.jpg" alt="Electronics" class="product-card-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card-emoji-fallback" style="display:none;">
+              <span class="product-emoji" style="font-size:48px;">📱</span>
+              <small>Add photo → img/electronics.jpg</small>
+            </div>
+          </div>
+          <div class="product-full-info">
+            <h3>Electronics</h3>
+            <p>Smartphones, accessories, earphones, chargers, smart home devices, PC components — you name it. Shenzhen is the electronics capital of the world, and I know the right suppliers.</p>
+          </div>
+        </div>
 
-/* ========== Page Titles ========== */
-.page-title { margin-bottom: 8px; }
-.page-sub { color: #888; margin-bottom: 48px; }
+        <div class="product-full-item">
+          <div class="product-full-img" style="background:#fce4ec;">
+            <img src="img/adult.jpg" alt="Adult Products" class="product-card-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card-emoji-fallback" style="display:none;">
+              <span class="product-emoji" style="font-size:48px;">🔞</span>
+              <small>Add photo → img/adult.jpg</small>
+            </div>
+          </div>
+          <div class="product-full-info">
+            <h3>Adult Products</h3>
+            <p>Adult wellness, intimate products, accessories. Discreet sourcing, quality materials, reliable factories with export experience.</p>
+          </div>
+        </div>
 
-/* ========== Back Link ========== */
-.back-link {
-  display: inline-block; margin-bottom: 32px;
-  font-size: 0.9rem; color: #2563eb; font-weight: 500;
-}
-.back-link:hover { text-decoration: underline; }
+        <div class="product-full-item">
+          <div class="product-full-img" style="background:#fff3e0;">
+            <img src="img/toys.jpg" alt="Toys & Games" class="product-card-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card-emoji-fallback" style="display:none;">
+              <span class="product-emoji" style="font-size:48px;">🧸</span>
+              <small>Add photo → img/toys.jpg</small>
+            </div>
+          </div>
+          <div class="product-full-info">
+            <h3>Toys &amp; Games</h3>
+            <p>Educational toys, plush dolls, outdoor games, RC toys, board games. From concept to finished product — I handle factory communication.</p>
+          </div>
+        </div>
 
-/* ========== Product Detail ========== */
-.product-detail-header {
-  margin-bottom: 40px;
-}
-.product-detail-header h1 { margin-bottom: 8px; }
-.product-detail-header .product-detail-category {
-  display: inline-block;
-  background: rgba(37,99,235,0.08);
-  color: #2563eb;
-  padding: 6px 14px;
-  border-radius: 100px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-.product-detail-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
-}
-.product-detail-image {
-  width: 100%; aspect-ratio: 4/3;
-  border-radius: 16px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 6rem;
-}
-.product-detail-body h2 {
-  font-size: 1.1rem; margin-bottom: 16px; margin-top: 28px;
-}
-.product-detail-body ul {
-  list-style: none; padding: 0;
-}
-.product-detail-body li {
-  padding: 8px 0; border-bottom: 1px solid #f0f0f0;
-  font-size: 0.92rem; color: #555;
-  display: flex; align-items: center; gap: 10px;
-}
-.product-detail-body li::before {
-  content: "✓"; color: #2563eb; font-weight: 700;
-}
-.product-detail-cta {
-  margin-top: 32px;
-}
-@media (max-width: 700px) {
-  .product-detail-body { grid-template-columns: 1fr; gap: 24px; }
-}
+        <div class="product-full-item">
+          <div class="product-full-img" style="background:#f3e5f5;">
+            <img src="img/other.jpg" alt="Other Products" class="product-card-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card-emoji-fallback" style="display:none;">
+              <span class="product-emoji" style="font-size:48px;">📦</span>
+              <small>Add photo → img/other.jpg</small>
+            </div>
+          </div>
+          <div class="product-full-info">
+            <h3>Other Products</h3>
+            <p>Home goods, packaging, promotional items, custom manufacturing. If you need it, I'll find a factory that makes it right.</p>
+          </div>
+        </div>
+      </div>
 
-/* ========== About ========== */
-.about-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 48px;
-  align-items: start;
-}
-.about-text p { margin-bottom: 20px; font-size: 1.02rem; line-height: 1.8; }
-.about-stats {
-  background: #fff; border-radius: 16px; padding: 28px;
-  border: 1px solid #eee;
-  display: flex; flex-direction: column; gap: 20px;
-}
-.stat {
-  display: flex; align-items: center; gap: 12px;
-  font-size: 0.95rem; font-weight: 500;
-}
-.stat-number { font-size: 1.8rem; }
-@media (max-width: 700px) {
-  .about-content { grid-template-columns: 1fr; }
-}
+      <div style="text-align:center;padding:60px 0;">
+        <a href="#" class="btn btn-primary btn-lg" data-page="contact">Tell Me What You Need →</a>
+      </div>
+    </div>
+  </section>
 
-/* ========== Contact ========== */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
-}
-.contact-item {
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
-}
-.contact-label {
-  display: block; font-size: 0.85rem; color: #888; margin-bottom: 4px;
-}
-.contact-value { font-size: 1.05rem; font-weight: 500; }
-.contact-note { margin-top: 16px; font-size: 0.82rem; color: #aaa; font-style: italic; }
-.contact-form {
-  background: #fff; border-radius: 16px; padding: 32px;
-  border: 1px solid #eee;
-  display: flex; flex-direction: column; gap: 16px;
-}
-.contact-form input, .contact-form select, .contact-form textarea {
-  width: 100%; padding: 14px 16px; border-radius: 10px;
-  border: 1px solid #ddd; font-size: 0.92rem; font-family: inherit;
-  background: #faf9f6;
-  transition: border-color 0.2s;
-}
-.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
-  outline: none; border-color: #2563eb;
-}
-.form-disclaimer {
-  font-size: 0.78rem; color: #aaa; text-align: center;
-}
-@media (max-width: 700px) {
-  .contact-grid { grid-template-columns: 1fr; }
-}
+  <!-- ============================== -->
+  <!-- Page: Contact                  -->
+  <!-- ============================== -->
+  <section id="page-contact" class="page">
+    <div class="container" style="padding-top:120px;">
+      <h1 class="page-title">Contact Me</h1>
+      <p class="page-sub">Let's talk about your sourcing needs. I typically respond within a few hours.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-label">📧 Email</span>
+            <span class="contact-value">
+              <a href="mailto:trade@xarvanta.com">trade@xarvanta.com</a>
+            </span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">💬 WhatsApp</span>
+            <span class="contact-value">
+              <a href="https://wa.me/85255894516" target="_blank" rel="noopener">+852 5589 4516</a>
+            </span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">💬 WeChat</span>
+            <span class="contact-value">xarvanta</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">📍 Location</span>
+            <span class="contact-value">Shenzhen, China</span>
+          </div>
 
-/* ========== Mobile Nav ========== */
-   .form-message {
-     padding: 12px 16px;
-     border-radius: 10px;
-     font-size: 0.9rem;
-     text-align: center;
-   }
-   .form-success {
-     background: #ecfdf5;
-     color: #065f46;
-     border: 1px solid #a7f3d0;
-   }
-   .form-error {
-     background: #fef2f2;
-     color: #991b1b;
-     border: 1px solid #fecaca;
-   }
-@media (max-width: 700px) {
-  .nav-links {
-    display: none;
-    position: absolute; top: 68px; left: 0; right: 0;
-    background: #fff; flex-direction: column; padding: 16px 24px;
-    gap: 16px; border-bottom: 1px solid #eee;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  }
-  .nav-links.open { display: flex; }
-  .hamburger { display: flex; }
-  .hero { padding: 100px 0 60px; }
-  .section { padding: 48px 0; }
-  .product-grid { grid-template-columns: 1fr; }
-  .trust-bar .container { gap: 20px; }
-   /* ========== WhatsApp Floating Button ========== */
-   .whatsapp-float {
-     position: fixed;
-     bottom: 24px;
-     right: 24px;
-     z-index: 999;
-     background: #25D366;
-     width: 56px;
-     height: 56px;
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-     transition: transform 0.2s, box-shadow 0.2s;
-   }
-   .whatsapp-float:hover {
-     transform: scale(1.1);
-     box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
-   }
-}
+          <div class="contact-quick-reply">
+            <p><strong>Quick reply:</strong> Tell me what you're sourcing, quantity, and target price — I'll get back to you fast.</p>
+          </div>
+
+          <!-- Direct buttons -->
+          <div class="contact-direct">
+            <a href="https://wa.me/85255894516" target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="white" style="vertical-align:middle;margin-right:8px;">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              WhatsApp Me
+            </a>
+            <a href="mailto:trade@xarvanta.com" class="btn btn-outline">Send Email</a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <h3>Send Me a Message</h3>
+          <form class="contact-form" id="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="text" placeholder="Company (optional)" />
+            <select>
+              <option value="">What are you sourcing?</option>
+              <option>Electronics</option>
+              <option>Adult Products</option>
+              <option>Toys &amp; Games</option>
+              <option>Other Products</option>
+              <option>General Sourcing</option>
+            </select>
+            <textarea rows="4" placeholder="Describe what you need — product, quantity, target price..." required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/85255894516" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
