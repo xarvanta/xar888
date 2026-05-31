@@ -153,23 +153,4 @@
  form-error';
      m.textContent = '❌ ' + text;
      form.appendChild(m);
-     /* ======== WhatsApp Floating Button ======== */
-   .whatsapp-float {
-     position: fixed;
-     bottom: 24px;
-     right: 24px;
-     z-index: 999;
-     background: #25D366;
-     width: 56px;
-     height: 56px;
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-     transition: transform 0.2s, box-shadow 0.2s;
-   }
-   .whatsapp-float:hover {
-     transform: scale(1.1);
-     box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
-   } }
+      }
