@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Xarvanta — China Sourcing Agent | Shenzhen</title>
+  <meta name="description" content="Xarvanta — Your China sourcing agent based in Shenzhen. Find reliable suppliers, factories, and products worldwide." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Quick mobile fixes */
+    .product-card-img img.product-photo { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
+    .gallery-main img#gallery-img { width:100%; height:100%; object-fit:contain; background:#f5f5f5; }
+    .contact-section .btn, .contact-buttons .btn { -webkit-tap-highlight-color:transparent; }
+    .whatsapp-float { -webkit-tap-highlight-color:transparent; }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo" data-page="home">Xarvanta</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#" data-page="home" class="active">Home</a>
+        <a href="#" data-page="products">Products</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== PAGE: HOME ========== -->
+  <section id="page-home" class="page active">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">📍 Shenzhen, China</div>
+        <h1>Your Trusted <span class="highlight">China Sourcing Agent</span></h1>
+        <p class="hero-sub">
+          I help global businesses find reliable suppliers, negotiate fair prices, and manage production — with honesty and speed.
+        </p>
+        <a href="#" class="btn btn-primary btn-lg" data-page="products">Browse Products</a>
+        <a href="#contact-section" class="btn btn-outline btn-lg" onclick="document.getElementById('contact-section').scrollIntoView({behavior:'smooth'})">Contact Me</a>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+      <div class="container">
+        <span class="trust-item">🏭 Factory Sourcing</span>
+        <span class="trust-item">💰 Best Prices</span>
+        <span class="trust-item">🔍 Quality Control</span>
+        <span class="trust-item">⚡ Fast Response</span>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about-section">
+      <div class="container">
+        <h2>I Find What You Need in China</h2>
+        <p>Based in Shenzhen — the world's manufacturing hub. I connect you with reliable factories, negotiate the best prices, and ensure quality before shipping.</p>
+        <div class="about-stats">
+          <div class="about-stat"><span class="stat-num">5+</span><span>Years</span></div>
+          <div class="about-stat"><span class="stat-num">200+</span><span>Factories</span></div>
+          <div class="about-stat"><span class="stat-num">50+</span><span>Countries</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Preview -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <h2 class="section-title">What I Source</h2>
+        <p class="section-sub">Tap a category to see details &amp; photos</p>
+        <div class="product-grid" id="homeProducts">
+          <!-- rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ON HOME PAGE ========== -->
+    <section class="contact-section" id="contact-section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p class="contact-intro">Let's talk about your sourcing needs. I respond within a few hours.</p>
+
+        <div class="contact-cards">
+          <div class="contact-card-item">
+            <div class="cc-icon">📧</div>
+            <div class="cc-label">Email</div>
+            <a href="mailto:trade@xarvanta.com" class="cc-value">trade@xarvanta.com</a>
+          </div>
+          <div class="contact-card-item">
+            <div class="cc-icon">💬</div>
+            <div class="cc-label">WhatsApp</div>
+            <a href="https://wa.me/85255894516" target="_blank" class="cc-value">+852 5589 4516</a>
+          </div>
+          <div class="contact-card-item">
+            <div class="cc-icon">💚</div>
+            <div class="cc-label">WeChat</div>
+            <span class="cc-value">xarvanta</span>
+          </div>
+        </div>
+
+        <div class="contact-buttons">
+          <a href="https://wa.me/85255894516" target="_blank" class="btn btn-whatsapp">💬 WhatsApp Me</a>
+          <a href="mailto:trade@xarvanta.com" class="btn btn-outline">📧 Send Email</a>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h3>Or leave a message</h3>
+          <form id="contact-form" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name *" required />
+            <input type="email" name="email" placeholder="Your Email *" required />
+            <input type="text" name="phone" placeholder="Phone / WhatsApp" />
+            <select name="category">
+              <option value="">I'm looking for...</option>
+              <option>Electronics</option>
+              <option>Adult Products</option>
+              <option>Toys &amp; Games</option>
+              <option>Other Products</option>
+              <option>General Sourcing</option>
+            </select>
+            <textarea name="message" rows="4" placeholder="Describe what you need — product, quantity, target price..." required></textarea>
+            <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+          </form>
+          <p class="form-note">* Required. I'll reply within 24 hours.</p>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- ========== PAGE: PRODUCTS ========== -->
+  <section id="page-products" class="page">
+    <div class="container" style="padding-top:96px;">
+      <h1 class="page-title">Product Categories</h1>
+      <p class="page-sub">Tap a category to see details</p>
+      <div class="product-grid" id="productsGrid">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PAGE: PRODUCT DETAIL ========== -->
+  <section id="page-product-detail" class="page">
+    <div class="container" style="padding-top:96px;">
+      <a href="#" class="back-link" data-page="products">← Back</a>
+      <div id="product-detail-content"></div>
+    </div>
+  </section>
+
+  <!-- ========== WHATSAPP FLOAT ========== -->
+  <a href="https://wa.me/85255894516" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <h4>Xarvanta</h4>
+          <p>Shenzhen, China</p>
+        </div>
+        <div class="footer-links">
+          <a href="#" data-page="home">Home</a>
+          <a href="#" data-page="products">Products</a>
+          <a href="#contact-section" onclick="if(document.getElementById('page-home').classList.contains('active')){event.preventDefault();document.getElementById('contact-section').scrollIntoView({behavior:'smooth'});}">Contact</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Xarvanta. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
