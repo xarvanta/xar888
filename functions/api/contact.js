@@ -21,8 +21,7 @@
          msg_type: 'interactive',
          card: {
            header: {
-             title: { tag: 'plain_text', content: '📩 New Inquiry from
- Xarvanta.com' },
+             title: { tag: 'plain_text', content: '📩 New Inquiry from Xarvanta.com' },
              template: 'blue',
            },
            elements: [
